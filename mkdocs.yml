@@ -1,7 +1,7 @@
 site_name: Panduan Konfigurasi GitHub ke Terminal
 site_description: Dokumentasi lengkap untuk mengkonfigurasi GitHub dengan terminal Linux
 site_author: Salman Mustapa
-site_url: https://salman-mustapa.github.io/github-setup-docs
+site_url: https://salman-mustapa.github.io/github-setup
 
 theme:
   name: material
@@ -66,8 +66,8 @@ nav:
   - Troubleshooting: troubleshooting.md
   - FAQ: faq.md
 
-repo_url: https://github.com/salman-mustapa/github-setup-docs
-repo_name: salman-mustapa/github-setup-docs
+repo_url: https://github.com/salman-mustapa/github-setup
+repo_name: salman-mustapa/github-setup
 
 extra:
   social:

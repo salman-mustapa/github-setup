@@ -4,13 +4,12 @@
 
 Selamat datang di panduan lengkap untuk mengkonfigurasi GitHub dengan terminal Linux! Dokumentasi ini akan memandu Anda langkah demi langkah untuk mengatur GitHub agar dapat digunakan dengan terminal, termasuk operasi `clone`, `push`, `pull`, dan `branch`.
 
-## 📋 Apa yang Akan Anda Pelajari
+## 📋 Yang Akan Anda Pelajari
 
-- [x] **Persiapan Awal** - Install Git dan membuat akun GitHub
-- [x] **Konfigurasi Dasar** - Setup identitas Git dan kredensial
-- [x] **Autentikasi** - Menggunakan Personal Access Token atau SSH
-- [x] **Testing** - Verifikasi konfigurasi dengan operasi Git
-- [x] **Troubleshooting** - Mengatasi masalah umum
+- **Instalasi Git** - Cara cepat install Git
+- **Setup Git dan GitHub** - Konfigurasi dasar dan Personal Access Token
+- **Testing** - Memastikan semuanya berjalan tanpa hambatan
+- **Troubleshooting** - Langkah cepat mengatasi error
 
 ## 🚀 Quick Start
 

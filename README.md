@@ -23,8 +23,8 @@ Dokumentasi ini mencakup panduan lengkap dari instalasi Git hingga operasi Git t
 
 1. **Clone repository ini:**
    ```bash
-   git clone https://github.com/salman-mustapa/github-setup-docs.git
-   cd github-setup-docs
+   git clone https://github.com/salman-mustapa/github-setup.git
+   cd github-setup
    ```
 
 2. **Install dependencies:**
@@ -127,8 +127,8 @@ pip install mkdocs mkdocs-material mkdocs-git-revision-date-localized-plugin
 
 ```bash
 # Clone repository
-git clone https://github.com/salman-mustapa/github-setup-docs.git
-cd github-setup-docs
+git clone https://github.com/salman-mustapa/github-setup.git
+cd github-setup
 
 # Install dependencies
 pip install -r requirements.txt
@@ -184,7 +184,7 @@ Jika Anda mengalami masalah atau memiliki pertanyaan:
 
 1. Baca [FAQ](docs/faq.md)
 2. Periksa [Troubleshooting](docs/troubleshooting.md)
-3. Buat [Issue](https://github.com/salman-mustapa/github-setup-docs/issues) di GitHub
+3. Buat [Issue](https://github.com/salman-mustapa/github-setup/issues) di GitHub
 4. Kirim email ke: salmanmustapa@outlook.com
 
 ## 🎯 Target Audience
@@ -218,4 +218,4 @@ Terima kasih kepada:
 
 ⭐ **Jika dokumentasi ini membantu, jangan lupa beri star!** ⭐
 
-[![GitHub stars](https://img.shields.io/github/stars/salman-mustapa/github-setup-docs.svg?style=social&label=Star)](https://github.com/salman-mustapa/github-setup-docs)
+[![GitHub stars](https://img.shields.io/github/stars/salman-mustapa/github-setup.svg?style=social&label=Star)](https://github.com/salman-mustapa/github-setup)

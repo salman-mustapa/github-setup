@@ -1,18 +1,58 @@
-# Test Koneksi
+# Test Koneksi GitHub
 
-Setelah Anda mengonfigurasi Git dan mengatur Personal Access Token, penting untuk menguji apakah semuanya berfungsi dengan baik. Panduan ini memberikan langkah-langkah untuk menguji koneksi dan otentikasi.
+Setelah Anda mengonfigurasi Git dan mengatur Personal Access Token, penting untuk menguji apakah semuanya berfungsi dengan baik. Panduan ini memberikan langkah-langkah komprehensif untuk menguji koneksi dan autentikasi GitHub.
 
-## 🔗 Test Koneksi dengan GitHub
+## 🔍 Verifikasi Konfigurasi Git
 
-### 1. Cek Koneksi Internet
+### 1. Cek Konfigurasi Git
 
-Pastikan Anda terhubung ke internet:
+Pastikan identitas Git sudah dikonfigurasi:
 
 ```bash
-ping -c 4 google.com
+# Lihat konfigurasi user
+git config --global --list | grep -E "(user.name|user.email)"
 ```
 
-### 2. Test Koneksi SSH (Opsional)
+Output yang diharapkan:
+```
+user.name=Salman Mustapa
+user.email=salmanmustapa@outlook.com
+```
+
+### 2. Cek Versi Git
+
+```bash
+git --version
+```
+
+Output contoh:
+```
+git version 2.48.1
+```
+
+## 🌐 Test Koneksi GitHub: Langkah Minimalis
+
+1. **Cek Versi Git**
+   ```bash
+   git --version
+   ```
+
+2. **Cek Konfigurasi Git**
+   ```bash
+   git config --global --list
+   ```
+
+3. **Test Koneksi Internet**
+   ```bash
+   ping -c 2 github.com
+   ```
+
+4. **Test API GitHub**
+   ```bash
+   curl -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/user
+   ```
+
+### 2. Test Koneksi SSH (Jika Menggunakan SSH)
 
 Jika Anda menggunakan SSH untuk otentikasi:
 
@@ -22,45 +62,110 @@ ssh -T git@github.com
 
 Output yang diharapkan:
 ```
-Hi <username>! You've successfully authenticated, but GitHub does not provide shell access.
+Hi salman-mustapa! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-### 3. Test Koneksi HTTP(S)
+## 🚀 Test Token dan Operasi Git dalam 5 Menit
 
-Jika Anda menggunakan Personal Access Token (PAT), coba clone repositori:
+1. **Set Token di Environment**
+   ```bash
+   export GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+   ```
+
+2. **Test Akses GitHub**
+   ```bash
+   curl -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/user
+   ```
+
+3. **Cek Repository**
+   ```bash
+   curl -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/user/repos
+   ```
+
+4. **Clone dan Push Cepat**
+   ```bash
+   git clone https://github.com/username/repository.git
+   cd repository
+   touch test.md
+   git add .
+   git commit -m "Test"
+   git push origin main
+   ```
+
+## 🧪 Test Operasi Git Lengkap
+
+### 1. Buat Repository Test Baru
 
 ```bash
-git clone https://github.com/<username>/<repository>.git
-```
-
-Jika berhasil, koneksi HTTPS Anda telah dikonfigurasi dengan benar.
-
-## 🧪 Test Operasi Git Dasar
-
-### 1. Buat dan Inisialisasi Repositori
-
-```bash
-mkdir test-repo
-cd test-repo
+# Buat direktori untuk test
+mkdir github-test
+cd github-test
 git init
+
+# Set branch default ke main
+git branch -m main
 ```
 
-### 2. Tambahkan dan Commit Perubahan
+### 2. Buat Commit Test
 
 ```bash
-echo "# Test Repository" > README.md
+# Buat file README
+echo "# GitHub Connection Test" > README.md
+echo "" >> README.md
+echo "Repository ini dibuat untuk menguji koneksi GitHub." >> README.md
+echo "" >> README.md
+echo "## Informasi" >> README.md
+echo "- Tanggal: $(date)" >> README.md
+echo "- User: $(git config user.name)" >> README.md
+echo "- Email: $(git config user.email)" >> README.md
+
+# Add dan commit
 git add README.md
-git commit -m "Initial commit"
+git commit -m "Initial commit: Add README with connection test info"
 ```
 
-### 3. Sambungkan ke Remote Repository
+### 3. Test Push ke Repository Baru
 
 ```bash
-git remote add origin https://github.com/<username>/test-repo.git
+# Tambahkan remote (sesuaikan dengan repository Anda)
+git remote add origin https://github.com/salman-mustapa/github-test.git
+
+# Push ke GitHub
 git push -u origin main
 ```
 
-Jika semua langkah di atas berhasil tanpa error, konfigurasi Git dan koneksi ke GitHub telah terverifikasi.
+!!! note "Catatan"
+    Repository `github-test` harus sudah dibuat di GitHub terlebih dahulu, atau Anda bisa menggunakan repository yang sudah ada.
+
+### 5. Pull dan Sync
+
+Cek apakah sudah sinkron dengan remote:
+```bash
+git pull origin main
+```
+
+---
+
+## ❌ Troubleshooting Cepat
+
+1. **Error Token**
+   - Pastikan token benar dan aktif.
+   - Cek permission token minimal harus `repo`.
+
+2. **Koneksi Gagal**
+   - Pastikan koneksi internet stabil.
+   - Coba ulangi test.
+
+3. **Permission Denied saat Push**
+   - Periksa apakah Anda memiliki akses repo.
+   - Cek URL remote pada konfigurasi git.
+
+4. **SSH Issues**
+   - Pastikan public key sudah terdaftar di GitHub.
+
+---
+
+🎉 **Selesai!** Jika semua langkah ini berhasil, berarti GitHub dan Git Anda sudah siap digunakan.
 
 ## ❌ Troubleshooting
 
