@@ -3,8 +3,15 @@
 [![MkDocs](https://img.shields.io/badge/docs-mkdocs-blue.svg)](https://www.mkdocs.org/)
 [![Material](https://img.shields.io/badge/theme-material-green.svg)](https://squidfunk.github.io/mkdocs-material/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen.svg)](https://salman-mustapa.github.io/github-setup/)
 
 Dokumentasi lengkap untuk mengkonfigurasi GitHub dengan terminal Linux. Panduan ini dibuat menggunakan MkDocs dengan tema Material untuk pengalaman membaca yang optimal.
+
+## 🌐 Dokumentasi Online
+
+**📖 Baca dokumentasi lengkap di:** [https://salman-mustapa.github.io/github-setup/](https://salman-mustapa.github.io/github-setup/)
+
+> Dokumentasi selalu up-to-date dan dapat diakses dari mana saja tanpa perlu install dependencies lokal.
 
 ## 🎯 Tentang Dokumentasi Ini
 

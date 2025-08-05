@@ -75,3 +75,18 @@ extra:
       link: https://github.com/salman-mustapa
     - icon: fontawesome/regular/envelope
       link: mailto:salmanmustapa@outlook.com
+  generator: false  # Hapus "Made with Material for MkDocs"
+
+copyright: |
+  <p>
+    © 2025 <a href="https://github.com/salman-mustapa" target="_blank">Salman Mustapa</a>. All rights reserved.
+    <br>
+    <small>
+      🚀 Developed with <a href="https://www.warp.dev/" target="_blank">Warp Terminal</a> & 
+      <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank">Material for MkDocs</a>
+    </small>
+    <br>
+    <small>
+      Licensed under <a href="https://github.com/salman-mustapa/github-setup/blob/main/LICENSE" target="_blank">MIT License</a>
+    </small>
+  </p>
